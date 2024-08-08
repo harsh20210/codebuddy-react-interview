@@ -9,12 +9,14 @@ import Form1 from './Form1';
 import Form2 from './Form2';
 import Form3 from './Form3';
 import success from "../Util/success.gif";
+import { useNavigate } from "react-router-dom";
 
 const steps = ['Form 1', 'Form 2', 'Form 3'];
 
 export default function Settper() {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
+  const navigate = useNavigate();
 
   const totalSteps = () => {
     return steps.length;
@@ -56,6 +58,8 @@ export default function Settper() {
   const handleReset = () => {
     setActiveStep(0);
     setCompleted({});
+    navigate('/posts');
+
   };
 
   const getStepContent = (step) => {
@@ -88,7 +92,9 @@ export default function Settper() {
             <img src={success} width={200} height={200} alt='loading...' />
           <h1 className="font-semibold text-[30px]">Thank you</h1>
           <h2>The form was submitted successfully</h2>
-           <Button variant="outlined" onClick={handleReset}>Back</Button>
+          <h4 style={{ color:"rgb(153 153 153)" }}>Please hold on while we redirect you to the post page.</h4>
+          <h5 style={{ color:"rgb(153 153 153)" }}>If the redirect doesn’t happen automatically, please click the button below to proceed."</h5>
+           <Button variant="outlined" onClick={handleReset}>Redirect Now</Button>
           </div>
         ) : (
           <div className="p-[10px] bg-[#f4f5f5] shadow-md rounded-[10px] mt-[30px]" >

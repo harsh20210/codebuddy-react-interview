@@ -8,11 +8,12 @@ import { useDispatch, useSelector } from "react-redux";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Checkbox from "@mui/material/Checkbox";
 import Swal from "sweetalert2";
-
+import { useNavigate } from "react-router-dom";
 
 export default function Form3({ handleNextClickEvent, handleBack , handleComplete }) {
   const { form1, form2 } = useSelector((state) => state.form);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [countryCode, setCountryCode] = useState("+91");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [validationError, setValidationError] = useState({
@@ -44,7 +45,10 @@ export default function Form3({ handleNextClickEvent, handleBack , handleComplet
   const functionToReset = () => {
     dispatch(updateForm1({ email: "", password: "" }));
     dispatch(updateForm2({ firstName: "", lastName: "", address: "" }));
-    handleComplete()
+    handleComplete();
+    setTimeout(() => {
+      navigate('/posts')
+    },4000)
   }
 
   const postApi = async () => {
