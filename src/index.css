@@ -3,3 +3,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    box-shadow: #f4f5f5 0px 3px 5px;
+    border-radius: 8px;
+    width: 90%;
+ }
+ 
+ input:hover {
+   box-shadow: rgba(129, 164, 201, 0.2) 0px 2px 8px 0px;
+   outline: none;
+ }
+ 
+ input:focus{
+   border:1px solid #81a4c9;
+ }
+ 
+ .colorRed {
+   color: red;
+ }
+
+
+ .swal2-confirm {
+  background-color:#1976d2 !important;
+  color: #fff;
+ }
+           
+        
+          
+ .postButton {
+  background-image: linear-gradient(to right, #2980b9 0%, #2c3e50  51%, #2980b9  100%);
+  margin: 5px;
+  padding: 5px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.postButton:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
