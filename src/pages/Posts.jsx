@@ -11,9 +11,6 @@ const Posts = () => {
     try {
       const response = await fetch(`https://codebuddy.review/posts`, {
         method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
       });
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);

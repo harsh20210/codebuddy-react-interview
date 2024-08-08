@@ -51,9 +51,6 @@ export default function Form3({ handleNextClickEvent, handleBack , handleComplet
     try {
       const response = await fetch(`https://codebuddy.review/submit`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
         body: JSON.stringify({
           "emailId": form1.email,
           "password": form1.password,
