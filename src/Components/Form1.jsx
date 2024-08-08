@@ -162,7 +162,7 @@ export default function Form1({handleNextClickEvent , handleComplete}) {
       <Button variant="outlined" disabled>Back</Button>
       <div className="flex gap-[10px]">
       <Button variant="contained" onClick={handleNextClickEvent}>Next</Button>
-      <Button disabled={Object.values(validationError).some(value => value !== "")} variant="contained" onClick={ handleChangeEvent}>Save</Button>
+      <Button disabled={Object.values(validationError).some(value => value !== "")} variant="contained" onClick={ handleChangeEvent}>Save and Next</Button>
       </div>
       </div>
     </>

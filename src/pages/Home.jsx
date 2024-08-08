@@ -10,9 +10,9 @@ const Home = () => {
 
   return (
     <>
-    <div className="flex justify-end mb-5">
+    {/* <div className="flex justify-end mb-5">
     <button className="postButton" onClick={handleClickEventForPost}>see Post</button>
-    </div>
+    </div> */}
     <Settper/>
     </>
   );

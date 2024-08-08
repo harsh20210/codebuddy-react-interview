@@ -206,7 +206,7 @@ export default function Form2({ handleNextClickEvent, handleBack , handleComplet
           variant="contained"
           onClick={handleChangeEvent}
         >
-          Save
+          Save and Next
         </Button>
         </div>
       </div>
